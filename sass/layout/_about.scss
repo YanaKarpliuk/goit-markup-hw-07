@@ -1,0 +1,78 @@
+.about {
+  padding-top: 95px;
+}
+
+.about-list {
+  display: flex;
+}
+
+.about-item {
+  list-style: none;
+  flex-basis: 270px;
+  margin: 0 15px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.about-icon-bg {
+  background-color: var(--bg-grayish);
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  @include centered;
+  align-items: center;
+}
+
+.about-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.about-item-title {
+  @include font (700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+}
+
+.about-item-text {
+  @include font (400, 14px, 1.7, 0.03em);
+  color: var(--gray-color);
+  margin-top: 10px;
+}
+
+.about-task-list {
+  display: flex;
+  padding-bottom: 95px;
+}
+
+.about-task-item {
+  position: relative;
+  list-style: none;
+  margin: 0 15px;
+  &:first-child {
+    margin-left: 0;
+    }
+  &:last-child {
+    margin-right: 0;
+    }
+}
+
+.about-task-meaning {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  @include font (700, 14px, 16px, 0.03em);
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: rgba(47, 48, 58, 0.8);
+  height: 70px;
+  width: 370px;
+  padding: 27px 0;
+}

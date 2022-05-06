@@ -1,0 +1,45 @@
+.company {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.company-list {
+  @include centered;
+}
+
+.company-item {
+  list-style: none;
+}
+
+.company-item + .company-item {
+  margin-left: 30px;
+}
+
+.company-link {
+  width: 170px;
+  height: 92px;
+  @include centered;
+  align-items: center;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  transition-property: border-color;
+  @include transitioned;
+  &:hover,
+  &:focus{
+    border-color: var(--blue-color);
+  }
+}
+
+.company-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+  transition-property: fill;
+  @include transitioned;
+  .company-link:hover & {
+    fill: var(--blue-color);
+    }
+  .company-link:focus & {
+    fill: var(--blue-color);
+    }
+}

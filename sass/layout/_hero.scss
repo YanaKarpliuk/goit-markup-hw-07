@@ -1,0 +1,21 @@
+.hero {
+  background-color: var(--bg-dark);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/Img-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-flex {
+  @include centered;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+}
+
+.hero-title {
+  color: white;
+  @include font (900, 44px, 1.36, 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+}

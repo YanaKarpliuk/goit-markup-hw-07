@@ -1,0 +1,132 @@
+.header {
+  border-bottom: 1px solid var(--border-color);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  @include font (700, 26px, 1.2, 0.03em);
+}
+
+.logo__text--blue {
+  color: var(--blue-color);
+}
+
+.logo__text--black {
+  color: black;
+}
+
+.menu-nav {
+  width: 100%;
+  margin-left: 95px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-nav__list {
+  @include font (500, 14px, 1.14, 0.02em);
+  list-style: none;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.menu-nav__item {
+  margin: 0 25px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.menu-nav__link {
+  text-decoration: none;
+  color: var(--black-color);
+  fill: var(--gray-color);
+  transition-property: color, fill;
+  @include transitioned;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &:hover,
+  &:focus {
+    color: var(--blue-color);
+    fill: var(--blue-color);
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--blue-color);
+    position: absolute;
+    bottom: 0;
+    border-radius: 2px;
+    opacity: 0;
+    transition-property: opacity;
+    @include transitioned;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+  &.menu-nav__link--active::after{
+    opacity: 1;
+  }
+}
+
+.menu-nav__link--active {
+  color: var(--blue-color);
+}
+
+.header-contact {
+  text-decoration: none;
+  fill: var(--gray-color);
+  transition-property: color, fill;
+  @include transitioned;
+  height: 100%;
+  position: relative;
+  color: var(--gray-color);
+  @include font (500, 14px, 1.14, 0.02em);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  &:hover,
+  &:focus {
+    color: var(--blue-color);
+    fill: var(--blue-color);
+  }
+  &:last-child {
+    margin-left: 25px;
+    margin-right: 0;
+  }
+}
+
+.header-contact__envelope-icon {
+  width: 16px;
+  height: 13px;
+  margin-right: 10px;
+}
+
+.header-contact__smartphone-icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
